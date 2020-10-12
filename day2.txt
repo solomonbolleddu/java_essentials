@@ -1,0 +1,19 @@
+//day2 assignment
+public class Day2 {
+	 
+	    void display(String name, int age, String city)
+	    {
+	        System.out.println("The name is "+name);
+	        System.out.println("The age is "+age);
+	        System.out.println("The city is "+city);
+	        System.out.println();
+	    }
+	    public static void main(String[] args)
+	    {
+	        Day2 e1=new Day2();
+	        Day2 e2=new Day2();
+	        e1.display("Anish",20,"San Jose");
+	        e2.display("Ashish",23,"hyderabad");
+	    }
+
+}
