@@ -1,0 +1,114 @@
+//avengers code
+import java.util.Scanner;
+
+public class Demo1 {
+
+	String  name,power,weapon,planet;
+	int age;
+	static int count=0,count2=0;
+	void getDetails()
+	{
+		count++;
+		Scanner sc=new Scanner(System.in);
+		Scanner sc1=new Scanner(System.in);
+		System.out.println("enter name of the avenger "+count+" : ");
+		name=sc.nextLine();
+		System.out.println("enter age of the avenger: ");
+		age=sc1.nextInt();
+		System.out.println("enter power of the avenger "+count+" : ");
+		power=sc.nextLine();
+		System.out.println("enter weapon of the avenger "+count+" : ");
+		weapon=sc.nextLine();
+		System.out.println("enter planet of the avenger "+count+" : ");
+		planet=sc.next();
+		System.out.println();
+		if (count==5)
+		{
+			sc.close();
+			sc1.close();
+		}
+		
+	}
+	void displayDetails()
+	{
+		count2++;
+		System.out.println("Name of the avenger "+count2+" : "+name);
+		System.out.println("Age of "+name+" : "+age);
+		System.out.println("Power of "+name+" : "+power);
+		System.out.println("Weapon of "+name+" : "+weapon);
+		System.out.println("Planet of "+name+" : "+planet);
+		System.out.println();
+	}
+	public static void main(String[] args) {
+		Demo1[] avengers=new Demo1[5];
+		for(int i=0;i<5;i++)
+		{
+			avengers[i]=new Demo1();
+			avengers[i].getDetails();
+		}
+		for(int i=0;i<5;i++)
+		{
+			avengers[i].displayDetails();
+		}
+	}
+}
+
+
+//odd elements in the array
+
+public class Demo2 {
+
+	int[] array= {12,4,7,3,2};
+	void oddArray()
+	{
+		for(int i=0;i<5;i++)
+		{
+		  System.out.print(array[i]+" ");
+		}
+		System.out.println();
+		System.out.println("odd element of array: ");
+		for(int i=0;i<5;i++)
+		{
+			if(array[i]%2!=0)
+			{
+				System.out.print(array[i]+" ");
+			}
+		}
+	}
+	public static void main(String[] args) {
+		Demo2 d=new Demo2();
+		d.oddArray();
+	}
+
+}
+
+
+
+//sum of 5 entered numbers by user
+
+
+import java.util.Scanner;
+
+public class Demo3 {
+
+	int[] array= new int[5];
+	int sum=0;
+	void Read()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter 5 elements:");
+		for(int i=0;i<5;i++)
+		{
+			array[i]=sc.nextInt();
+			sum+=array[i];
+		}
+		System.out.println("Sum of entered 5 elements is "+sum);
+		sc.close();
+	}
+	public static void main(String[] args) {
+	 Demo3 d=new Demo3();
+	 d.Read();
+	}
+
+}
+ 
